@@ -1,113 +1,74 @@
-# ElectroLeaf UI - React Material Dashboard
+# ElectroLeaf API
 
-A modern React-based dashboard application built with Material-UI.
-
-> **Node.js Version**: This application is compatible with **Node.js 18**
+Backend API for the ElectroLeaf project.
 
 ## Prerequisites
 
-Ensure you have the following installed:
-- Node.js 18 (see [Node.js Setup](#nodejs-setup) below)
+- Node.js 18.x
 - npm (comes with Node.js)
 
-### Node.js Setup
+## Use Node 18 with nvm
 
-#### Using NVM (Node Version Manager) - Recommended
+This project should be run with **Node.js 18**.
 
-NVM allows you to manage multiple Node.js versions on your system.
+### Windows (nvm-windows)
 
-##### Windows Users
+```powershell
+nvm install 18
+nvm use 18
+node -v
+```
 
-1. Install NVM for Windows:
-   - Download from: https://github.com/coreybutler/nvm-windows/releases
-   - Download the `nvm-setup.exe` installer
-   - Run the installer and follow the setup wizard
+### macOS/Linux (nvm)
 
-2. Verify NVM installation:
-   ```powershell
-   nvm --version
-   ```
+```bash
+nvm install 18
+nvm use 18
+node -v
+```
 
-3. Install Node.js 18:
-   ```powershell
-   nvm install 18
-   ```
+You should see a Node version that starts with `v18`.
 
-4. Set Node.js 18 as the active version:
-   ```powershell
-   nvm use 18
-   ```
-
-5. Verify Node.js version:
-   ```powershell
-   node --version  # Should display v18.x.x
-   npm --version
-   ```
-
-##### macOS/Linux Users
-
-1. Install NVM:
-   ```bash
-   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-   ```
-
-2. Reload your shell configuration:
-   ```bash
-   source ~/.bashrc  # or ~/.zshrc for zsh users
-   ```
-
-3. Install Node.js 18:
-   ```bash
-   nvm install 18
-   ```
-
-4. Set Node.js 18 as the active version:
-   ```bash
-   nvm use 18
-   ```
-
-5. Verify Node.js version:
-   ```bash
-   node --version  # Should display v18.x.x
-   npm --version
-   ```
-
-## Getting Started
-
-### 1. Install Dependencies
+## Install Dependencies
 
 ```bash
 npm install
 ```
 
-This will install all required packages listed in `package.json`.
+## Environment Variables
 
-### 2. Start the Development Server
+Create a local environment file before running the API.
+
+```bash
+cp .env.example .env
+```
+
+If `cp` is not available on your shell (for example, on PowerShell), use:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Then update `.env` with your actual configuration values.
+
+## Run the Project
+
+### Development mode
+
+```bash
+npm run dev
+```
+
+### Production mode
 
 ```bash
 npm start
 ```
 
-The application will automatically open in your default browser at `http://localhost:3000`
+By default, this starts the API from `index.js`.
 
-The app will reload whenever you make changes to the code.
+## Available Scripts
 
-### 3. Build for Production
-
-```bash
-npm run build
-```
-
-This creates an optimized production build in the `build/` directory.
-
-### 4. Run Tests
-
-```bash
-npm test
-```
-
-Runs the test suite in interactive watch mode.
-
-## Original Template
-
-Based on Material UI template by DeviasIO
+- `npm run dev` - Start with nodemon for development
+- `npm start` - Start with node
+- `npm test` - Placeholder test script
