@@ -1,0 +1,43 @@
+{
+  "name": "api2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aedes": "^0.46.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.2.0",
+    "express-graphql": "^0.12.0",
+    "express-session": "^1.17.1",
+    "googleapis": "^95.0.0",
+    "graphql": "^15.5.0",
+    "imagekit": "^3.2.5",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.1",
+    "mqtt": "^4.2.6",
+    "mqtt-simple-router": "^1.2.0",
+    "multer": "^1.4.5-lts.1",
+    "net": "^1.0.2",
+    "node-cache": "^5.1.2",
+    "node-fetch": "^2.6.7",
+    "node-schedule": "^2.0.0",
+    "nodemailer": "^6.7.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
